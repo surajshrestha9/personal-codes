@@ -1,7 +1,9 @@
-import HomePage from "./home/homePage";
-import LoginPage from "./auth/login/loginPage";
-import RegisterPage from "./auth/register/registerPage";
+import HomePage from "./home/HomePage";
+import ErrorPage from "./error/ErrorPage";
+import LoginPage from "./auth/login/LoginPage";
+import RegisterPage from "./auth/register/RegisterPage";
 
-export const Pages = { HomePage, LoginPage, RegisterPage };
+
+export const Pages = { HomePage, LoginPage, RegisterPage,ErrorPage};
 
 // export default HomePage
