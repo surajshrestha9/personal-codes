@@ -1,0 +1,380 @@
+- Two types of Deps
+    - Dependencies
+        - Compulsory
+            dependency
+    - devDependencies
+        - developmental Deps
+            nodemon
+
+
+http 
+path 
+event
+crypto 
+
+
+
+Service 
+    => Nodejs 
+        => Http 
+
+NPM 
+    - http 
+    - crypto
+    - path 
+    - events 
+
+Dependencies
+    - Compulsory
+    - devDependencies
+
+
+MVC Pattern
+    => Model View And Controller
+
+
+===> Request 
+    // url 
+
+    method 
+    data 
+
+login 
+
+// login => get 
+
+url
+=====> Route =============> Controller  <=======> Model ======> Database 
+
+                            VIEW file 
+
+Express Middleware 
+    a. Application level Middleware 
+    b. Router Level Middleware
+    c. Built-in Middleware
+    d. Custom Middleware 
+    e. Static Middleware
+    f. Error Handling Middleware
+
+Db 
+    -> 2 types 
+    a. Sql Database 
+        Structured Query Language 
+        Mysql, Ms Sql, orcale, postgresql 
+
+    b. NoSQL Database 
+        Not only SQL 
+        Mongodb
+
+Relation Database Management System 
+Non-Relational Database Management System
+
+Ecommerce 
+
+orders 
+oid     name            product             price        qty         Amount      Entry
+--------------------------------------------------------------------------------------------
+1       Ram             Product One         1000        2           2000            Hari 
+--------------------------------------------------------------------------------------------
+2       ram             productone          500         3           2500            hari 
+--------------------------------------------------------------------------------------------
+3       Ram             Product One         1000        1           1000            Hari 
+
+users                 products                          
+id      name        id      name            price      
+---------------     ------------------------------      
+1       Ram         1       product One     1000
+---------------
+2       Hari 
+
+orders 
+id          user_id         product_id      qty         Amount      entry 
+------------------------------------------------------------------------------
+1           1               1               2           2000        2
+------------------------------------------------------------------------------
+2           1               1               3           3000        2
+------------------------------------------------------------------------------
+3           1               1               1           1000        2
+
+
+- Local hosting 
+    - server setupr 
+- Cloud service 
+    - 512 mb free cluster (Mongo atlas)
+
+
+protocol: mongodb 
+port: 27017
+host: localhost
+auth: no auth
+
+mongodb://password:username@localhost:27017/dbName
+
+
+// Database 
+- table => Collection 
+- Row => a Document of the collection 
+
+4 operations 
+    - CRUD Operation 
+
+    - Create 
+        - Data 
+            - Single row at a time 
+                -> db.collection_name.insert(data)
+                    - data should be a valid json object or an array 
+                    - if inserted a single row, 
+                        - nInserted - ack return 
+                    - if multiple insertion, 
+                        - an object of ack
+            - Multiple row at a time
+
+            - _id will be assigned to all the documents 
+                - this works as a primary key for the data 
+                - this is an instance of ObjectId class of mongodb
+    - Read 
+        -> db.collection_name.find(filter, projection)
+        - if no filter or projection is passed, the function returns all the documents 
+
+        Filter 
+            a.
+                {
+                    key: value
+                }
+            another syntax 
+                {
+                    $operator: <expression>
+                }
+            another 
+                {
+                    key: {$operator: value}
+                }
+
+            ids collection 
+                {
+                    _id: {$in: [ids, ids]}
+                }
+            => is always a json object 
+                e.g, all the users from lalitpur
+                {
+                    address: "lalitpur"
+                }
+            b. all the active users from Bhaktapur
+                // Where address = "Bhaktapur" and status = "active"
+                e.g: 
+                    {
+                        address: "Bhaktapur",
+                        status: "active"
+                    }
+            c. All the users from Bhaktapur or users with status active 
+                where address = "Bhaktapur" or status = "active"
+                {
+                    $or: [{"address": "Bhaktapur", status: "active"}]    
+                }
+        // selec tquery => select fields 
+        projection => keys to be fetched
+    - Update 
+        -> db.collection_name.update(filter, {$set: data}, {upsert: boolean})
+            where upsert is update or insert
+            filter is similar to that of .find();
+            $set is operator
+            data should be a valid json content 
+    - Delete
+        -> db.collection_name.deleteOne(filter)
+        Or 
+        -> db.collection_name.deleteMany(filter)
+
+GUI application 
+    - compass 
+
+Application development
+Mongo db Core driver 
+Mongoose package
+
+Schema Based DB 
+    ecommerce 
+        Users 
+            -   name
+                address
+                email 
+                phone 
+                password
+                image 
+                role 
+                status: inactive
+                token: 
+        Brand
+            - name 
+            - description 
+            - logo 
+        
+        category 
+            name 
+            brands ref
+            parent_id
+brands 
+1   Apple 
+
+1       Category A      null        [1, 2]
+2       Category B      1
+
+
+register => user register ---> email for activate
+            system ---> action token/otp 
+                password ---> Active 
+
+
+        daraz 
+            ====> Register 
+                google , fb 
+
+        user create 
+            => KYC fill 
+
+// Slider / Banner 
+// Category 
+// Brands 
+// Product 
+// User Seller 
+// Order 
+
+
+FE side 
+    - Designing(Web Design)
+    - Development 
+            -> Conversion - html/css, jsx or tsx,vue
+            -> Integration API 
+    - FE Developer 
+    - React js 
+        - FE development - React
+    - HTML css JS
+
+
+HTML tags 
+    <tag></tag>
+    => two type tags 
+    => Opened Tag    
+        <tag>
+    => Closed tag    
+        <tag attributes="value"></tag>
+
+    - tag attributes 
+        a. Specific
+            - some tags specific attributes 
+                - src, href, lang, http-equiv, charset, type, selected, dissabled, enabled
+                checked, etc. 
+        b. Global 
+            - id, name, title, class, style, data-*, customAttr
+
+            <p class="value value" style="cssProperty: value; cssProp: value" >
+
+
+            <p>
+                <p></p>
+            </p>
+
+            <a href="/twitter">
+                <a href="/google">
+                    Home
+                </a>
+            </a>
+
+=> Table design, Form Design, Card Design, Content Design 
+=> Layout Design - Flex, Grid
+
+A form input can have these basic input types"
+    text
+        => 255 chars, 
+    number, date, time, datetime, datetime-local, file,
+    hidden, radio, checkbox, url, reset, button, submit, 
+    range, tel 
+
+User Input 
+    - input 
+    - textarea
+    - select-option 
+    - button 
+
+Responsive / Non-responsive
+
+
+CSS Based => 
+    Bootstrap 
+    Material Css 
+    Tailwind 
+    Chakra UI 
+
+Grid ====> Table    
+
+        Row 
+Column  cell/grid
+
+Smartphones/Mobile devices
+default(xs)     < 568px 
+sm              >= 568px
+
+tablets/ipad
+md              >= 772
+
+// ipad / lower laptops
+lg              >= 992
+
+// Laptops/monitors
+xl              >= 1200
+
+// Retina 
+xxl             >= 1400
+
+
+html 
+    body 
+        content 
+            html tags
+
+
+- container => body width set 
+- container-fluid
+        - row (12 columns)  100% width
+            - col-1 to col-12
+                e.g.    
+                    col-3, col-3, col-3, col-3,
+                    col-3
+            - col-sm-1 to col-sm-12 
+            - col-md-1 to col-md-12
+            - col-lg-1 to col-lg-12
+            - col-xl-1 to col-xl-12
+            - col-xxl-1 to col-xxl-12
+
+- Vanila Bootstrap 
+    - Styled Component / React Component 
+
+SPA 
+
+- Component 
+    - Mounting 
+        - constructor()
+            - default data set 
+        - reander()
+        - componentDidMount()
+    - Updating 
+        - render()
+    - Unmounting
+- Types of Component 
+- State Vs. Props
+- Web Hook
+
+
+State 
+    => Data stored by the component 
+Props 
+    => Are the incoming data
+
+
+React Hook 
+    - State Hook 
+        - those hook functions which creates a state for a react component
+        - 
+    - Effect Hook 
+
+
+    uses use as a prefix

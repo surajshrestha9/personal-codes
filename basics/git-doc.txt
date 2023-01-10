@@ -1,0 +1,102 @@
+### One time command for the First time user
+git config --global user.name "Your name"
+git config --global user.email "email"
+
+###
+How to initailize git? 
+-> Suppose you have an empty git repo on online service then copy the clone url
+-> Run the following commands once inside the project directory once,
+    - git init  
+        -> This will initialize a git in your current working directory
+        -> This will create a .git folder inside your project
+        -> This will start to sync the history with the remote that we connect
+
+    - git remote add <name> <remote url>
+        where <name> should be replaced by any name you want for <remote url>
+        also <remote url> is the link to your git repo online
+        -> This command will connect your repo to remote git repo
+
+    
+### How to push/pull the code in repo?
+-> Run the following steps:
+a. Add the changes for the tracking 
+    git add <filename> 
+    -> Will add <filename> specified file 
+    or 
+    git add .
+b. Commit the changes you have added 
+    git commit -m "Your message"
+    - You are now allowed to push/pull the code
+c. To push the source code
+    by default a branch named master/main
+    git push <name> <localBranch>:<remoteBranch> 
+    where <remoteBranch> is optional 
+    e.g. 
+        git push origin master:main
+d. To pull the source code 
+    git pull <remoteName> <remoteBranch>
+    e.g 
+        git pull origin master
+
+    - Sometimes when pulling the source code, we get conflict 
+    - First manullay resolve the code base 
+    - After resolving, repeat step a b and c or d to push or pull 
+
+Versioning on git 
+- Commits/tag/merge stages
+
+To create a new branch  
+    - git checkout -b <branch_name> 
+        it will checkout out current branch's files to the branch_name you created just now.
+
+To list all the branches 
+    - git branch 
+
+To switch to any  branch/commit 
+    - git checkout <branch/commit Id>
+    
+# You have the source code on repo but not in your local machine
+    - git clone <remote Url>
+
+# 
+
+## Functions, OOP 
+// Node js Core  
+// Express 
+// API Dev
+// MongoDB 
+// API DEV .....
+
+// HTML / Css/ Bootstrap, tailwaind, Chakra UI, Material
+// React 
+
+
+// Project Architecture 
+
+MVC Pattren 
+    - Model View Controller
+
+    Data Manipulation
+
+    Facebook 
+
+---> Request
+    - listened by server 
+    - Our server response
+
+login data 
+    -> user data 
+    -> method, 
+    -> endpoint
+    -> Header Request
+    -> Client Info 
+    -> Session info 
+    -> Cookie  
+
+    -> post method, /login  ===> Route
+            ---> Action     ===> Controller
+            ---> Data       ===> Model 
+            ---> Represent  ===> View
+
+
+---> Response
