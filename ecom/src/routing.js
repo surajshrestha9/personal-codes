@@ -8,7 +8,6 @@ import {
 } from "react-router-dom";
 import { Pages } from "./pages";
 import { useCallback, useEffect, useState } from "react";
-import HomeLayout from "./pages/layout/home-layoutPage";
 import CustomComponent from "./components";
 
 // id receive in Brand Page
@@ -82,10 +81,10 @@ const Routing = () => {
       <BrowserRouter>
         {/* <CustomComponent.MenuComponent /> */}
         <Routes>
-          <Route path="/" element={<HomeLayout />}>
+          <Route path="/" element={<Pages.HomeLayout />}>
             <Route index element={<Pages.HomePage />} />
-            <Route path="register" element={<Pages.RegisterPage />} />
-            <Route path="login" element={<Pages.LoginPage />} />
+            <Route path="register" element={<Pages.AuthPage />} />
+            <Route path="login" element={<Pages.AuthPage />} />
             <Route path="brand/:id" element={<BrandPage />} />
             <Route
               path="/category/:slug"

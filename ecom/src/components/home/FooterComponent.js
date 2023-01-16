@@ -1,6 +1,6 @@
 const HomePageFooterComponent = () => {
   return (
-    <div>HomePageFooterComponent</div>
+    <>HomePageFooterComponent</>
   )
 }
 export default HomePageFooterComponent

@@ -1,5 +1,5 @@
-import { Button } from "react-bootstrap";
-const ButtonComponent = ({showSubmit,showCancel,text}) => {
+import { Button} from "react-bootstrap";
+const ButtonComponent = ({ showSubmit, showCancel, text }) => {
   return (
     <>
       {showCancel ? (
@@ -20,7 +20,6 @@ const ButtonComponent = ({showSubmit,showCancel,text}) => {
       ) : (
         <></>
       )}
-      
 
       {/* <Button type="reset" variant="danger" className="me-3">
         reset
